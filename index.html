@@ -324,7 +324,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:500; padding:1rem 1.5rem; 
 .faq-item:nth-child(1){transition-delay:.05s} .faq-item:nth-child(2){transition-delay:.1s} .faq-item:nth-child(3){transition-delay:.16s} .faq-item:nth-child(4){transition-delay:.22s} .faq-item:nth-child(5){transition-delay:.28s} .faq-item:nth-child(6){transition-delay:.34s} .faq-item:nth-child(7){transition-delay:.4s}
 
 /* FOOTER */
-footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
+footer { padding:4rem 3rem 2rem; background:#030208; border-top:1px solid rgba(232,226,248,.10); }
 .footer-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4rem; }
 .footer-brand { line-height:1; }
 .footer-links { display:flex; gap:5rem; }
@@ -413,7 +413,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
 
 /* ═══ HOW IT WORKS ═══ */
 .how-section{padding:8rem 3rem;background:var(--bg2);overflow:hidden;position:relative}
-.how-inner{max-width:820px}
+.how-inner{max-width:820px;margin:0 auto}
 .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem}
 .how-step{background:var(--bg3);padding:3rem 2.5rem;position:relative;overflow:hidden;cursor:default}
 .how-step::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
@@ -434,7 +434,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
 
 /* ═══ DEPOT SECTION ═══ */
 .depot-section{padding:0;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:600px}
-.depot-img-side{position:relative;overflow:hidden}
+.depot-img-side{position:relative;overflow:hidden;background:linear-gradient(140deg,#211a3d 0%,#120d26 52%,#08070F 100%)}
 .depot-img{position:absolute;inset:-10%;width:120%;height:120%;object-fit:cover;object-position:center;will-change:transform}
 .depot-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 0%,var(--bg) 100%)}
 .depot-content{background:var(--bg);padding:6rem 4rem;display:flex;flex-direction:column;justify-content:center;gap:2rem}
@@ -494,7 +494,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
 .impact-wow-divider{width:1px;height:160px;background:linear-gradient(to bottom,transparent,rgba(232,226,248,.15) 30%,rgba(232,226,248,.15) 70%,transparent);align-self:center;flex-shrink:0}
 
 /* THE NUMBER */
-.impact-wow-num{font-family:var(--font-display);font-size:clamp(4.5rem,9vw,9rem);font-weight:300;color:var(--cream);line-height:.9;letter-spacing:-.03em;position:relative}
+.impact-wow-num{font-family:var(--font-display);font-size:clamp(4rem,8vw,8rem);font-weight:400;color:var(--cream);line-height:.95;letter-spacing:.01em;position:relative;display:flex;justify-content:center;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
 .impact-unit-inline{font-size:clamp(2.5rem,5vw,5rem);color:var(--rust-light);font-style:italic}
 
 /* Slot machine digits */
@@ -547,6 +547,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
   inset: 0;
   z-index: 0;
   overflow: hidden;
+  background: radial-gradient(ellipse 120% 85% at 50% 32%, #241c4a 0%, #130d2a 46%, #08070F 100%);
 }
 
 /*
@@ -645,7 +646,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
   .manifesto-stats { gap: 2rem; flex-wrap: wrap; }
 
   .impact-wow-inner { padding: 4rem 1.5rem; gap: 3rem; }
-  .impact-wow-stats { flex-direction: column; gap: 2.5rem; }
+  .impact-wow-stats { flex-direction: column; gap: 2.5rem; align-items: center; }
   .impact-wow-divider { width: 120px; height: 1px; }
   .impact-wow-col { padding: 0 1rem; }
 
@@ -734,6 +735,10 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
   .mobile-menu { display:none !important; }
 }
 
+@media (min-width:901px) {
+  .how-inner > .reveal { text-align: center; }
+  .how-section .drops-title { margin-left: auto; margin-right: auto; }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -997,7 +1002,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
       <h2 class="drops-title" style="max-width:600px">Comment ça <em>marche</em></h2>
     </div>
     <div class="how-steps">
-      <div class="how-step reveal reveal-delay-1"><span class="step-num">01</span><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg><h3 class="step-title">On <em>chine</em></h3><p class="step-desc">Brocantes, vide-greniers, dépôts de particuliers — on parcourt Bruxelles et ses environs chaque semaine à la recherche de pièces qui méritent une seconde vie.</p></div>
+      <div class="how-step reveal reveal-delay-1"><span class="step-num">01</span><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg><h3 class="step-title">On <em>source</em></h3><p class="step-desc">Un réseau de fournisseurs triés sur le volet — nous sourçons en continu des pièces vintage et de seconde main qui méritent une seconde vie.</p></div>
       <div class="how-step reveal reveal-delay-2"><span class="step-num">02</span><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="step-title">On <em>sélectionne</em></h3><p class="step-desc">Chaque pièce est inspectée, nettoyée et évaluée à la main. État, authenticité, style, époque — seules les pièces qui passent notre filtre rejoignent la boutique.</p></div>
       <div class="how-step reveal reveal-delay-3"><span class="step-num">03</span><svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg><h3 class="step-title">Vous <em>trouvez</em></h3><p class="step-desc">Des pièces uniques, à prix justes, pour ceux qui savent que le style ne s'achète pas neuf. Chaque semaine de nouvelles arrivées — chaque pièce est la seule.</p></div>
     </div>
@@ -1095,7 +1100,7 @@ footer { padding:4rem 3rem 2rem; border-top:1px solid rgba(232,226,248,.08); }
 
 <!-- DEPOT -->
 <section class="depot-section" id="depot">
-  <div class="depot-img-side"><img loading="lazy" decoding="async" class="depot-img parallax-depot" src="https://images.unsplash.com/photo-1532453288672-3a17f2e6ad51?auto=format&fit=crop&w=1200&q=80" alt="Dépôt-vente de vêtements chez P-PITE, Ixelles Bruxelles"><div class="depot-img-overlay"></div></div>
+  <div class="depot-img-side"><img loading="lazy" decoding="async" onerror="this.style.display='none'" class="depot-img parallax-depot" src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80" alt="Dépôt-vente de vêtements chez P-PITE, Ixelles Bruxelles"><div class="depot-img-overlay"></div></div>
   <div class="depot-content">
     <div class="reveal">
       <p class="section-label">— Déposer vos pièces</p>
